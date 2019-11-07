@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     public void GoToGameScene()
     {
-        SceneManager.LoadScene("Tap&Swipe");
+        SceneManager.LoadScene("Tap&SwipeDestroyFall");
     }
     // Start is called before the first frame update
     void Start()
