@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainSplash.unity
     guid: 84d2e17480ae5ed468d26e4eca3a7124
-  - enabled: 1
-    path: Assets/Scenes/Tap&Swipe.unity
+  - enabled: 0
+    path: Assets/Scenes/Basics.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tap&SwipeBounce.unity
     guid: 166e696d22397744683633157bf617fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tap&SwipeBounceSpawn.unity
     guid: 5707825bc1b20fa47bc387c821d41d39
+  - enabled: 1
+    path: Assets/Scenes/Tap&SwipeDestroy.unity
+    guid: ee84e0065ddda474baad4b7e0ebc491b
   m_configObjects: {}

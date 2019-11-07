@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 113856329}
   - component: {fileID: 113856332}
   - component: {fileID: 113856331}
-  - component: {fileID: 113856333}
   - component: {fileID: 113856334}
   - component: {fileID: 113856335}
   m_Layer: 0
@@ -231,18 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectSwipeOnlyAfterRelease: 1
   minDistanceForSwipe: 20
---- !u!114 &113856333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113856328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1730d1f4e2f5807499d58717fee1f880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &113856334
 Rigidbody2D:
   serializedVersion: 4
