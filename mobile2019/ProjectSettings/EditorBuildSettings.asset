@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainSplash.unity
-    guid: 84d2e17480ae5ed468d26e4eca3a7124
-  - enabled: 1
     path: Assets/Scenes/Tap&Swipe.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
