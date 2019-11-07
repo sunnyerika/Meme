@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     public void GoToGameScene()
     {
-        SceneManager.LoadScene("Tap&SwipeDestroyFall");
+        SceneManager.LoadScene("Tap&SwipeDestroyFallReset");
     }
     public void Restart()
     {
