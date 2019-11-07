@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainSplash.unity
     guid: 84d2e17480ae5ed468d26e4eca3a7124
   - enabled: 0
@@ -20,7 +20,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tap&SwipeDestroy.unity
     guid: ee84e0065ddda474baad4b7e0ebc491b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tap&SwipeDestroyFall.unity
     guid: c042dbcaf47409a48817052a08712f70
+  - enabled: 0
+    path: Assets/Scenes/Tap&SwipeDestroyFallReset1.unity
+    guid: 10a0bdc27489fde4ab916555a2b8ea4e
+  - enabled: 1
+    path: Assets/Scenes/T0ap&SwipeDestroyFallReset1Spawn.unity
+    guid: a5e19366006410143bb5a9feb44f23f6
   m_configObjects: {}
