@@ -12,6 +12,7 @@ public class SwipeAndDestroy : MonoBehaviour
 
     private void SwipeDetector_OnSwipe(SwipeData data)
     {
-        Debug.Log("SwipeAndDestroy: " + data.Direction);
+        Debug.Log("SwipeAndDestroy: ");
+        Destroy(gameObject);
     }
 }
