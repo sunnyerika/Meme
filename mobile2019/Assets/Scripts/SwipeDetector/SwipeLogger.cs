@@ -4,12 +4,11 @@ public class SwipeLogger : MonoBehaviour
 {
     private void Awake()
     {
-        SwipeDetector.OnSwipe += SwipeDetector_OnSwipe;//we register for OnSwipe - the callback is below
+        SwipeDetector.OnSwipe += SwipeDetector_OnSwipe;
     }
 
-    private void SwipeDetector_OnSwipe(SwipeData data)//in the callback we log out the direction
+    private void SwipeDetector_OnSwipe(SwipeData data)
     {
         Debug.Log("Swipe in Direction: " + data.Direction);
-        Destroy(gameObject);
     }
 }

@@ -10,10 +10,9 @@ public class SwipeDetector : MonoBehaviour
     private bool detectSwipeOnlyAfterRelease = false;
 
     [SerializeField]
-    private float minDistanceForSwipe = 20f;//20 pixels
+    private float minDistanceForSwipe = 20f;
 
-    //this is a static method , ;since it's sth that is reused across the project so we don't need to get a reference to our swipedetector i.e in the logger - 
-    public static event Action<SwipeData> OnSwipe = delegate { };//an event that passes in swipeData --logger listens to event
+    public static event Action<SwipeData> OnSwipe = delegate { };
 
     private void Update()
     {
@@ -25,7 +24,7 @@ public class SwipeDetector : MonoBehaviour
                 fingerDownPosition = touch.position;
             }
 
-            if (!detectSwipeOnlyAfterRelease && touch.phase == TouchPhase.Moved)//if we want to detect swipes the whole way along
+            if (!detectSwipeOnlyAfterRelease && touch.phase == TouchPhase.Moved)
             {
                 fingerDownPosition = touch.position;
                 DetectSwipe();
@@ -41,9 +40,9 @@ public class SwipeDetector : MonoBehaviour
 
     private void DetectSwipe()
     {
-        if (SwipeDistanceCheckMet())//check if we moved far enough (min 20 pixels) 
+        if (SwipeDistanceCheckMet())
         {
-            if (IsVerticalSwipe())//else horizontal
+            if (IsVerticalSwipe())
             {
                 var direction = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
                 SendSwipe(direction);
@@ -77,7 +76,7 @@ public class SwipeDetector : MonoBehaviour
         return Mathf.Abs(fingerDownPosition.x - fingerUpPosition.x);
     }
 
-    private void SendSwipe(SwipeDirection direction)//creates swipedata struct and calls onSwipe event
+    private void SendSwipe(SwipeDirection direction)
     {
         SwipeData swipeData = new SwipeData()
         {
