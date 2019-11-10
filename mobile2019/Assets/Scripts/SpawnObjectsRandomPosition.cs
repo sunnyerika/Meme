@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObjectsRandom : MonoBehaviour
+public class SpawnObjectsRandomPosition : MonoBehaviour
 {
-    
+    public float range;
     public float delay;
     // public GameObject objectToSpawn;
     public GameObject[] objectsToSpawn;
@@ -32,8 +32,8 @@ public class SpawnObjectsRandom : MonoBehaviour
     void Spawn()
     {
         //Instantiate(objectToSpawn, transform.position, transform.rotation);//where we want to spawn it = position of spawner
-        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Length)], transform.position, transform.rotation, spawnParent);//spawn as a child gameObject of the parent - 
-
+        //Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Length)], transform.position, transform.rotation, spawnParent);//spawn as a child gameObject of the parent - 
+        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Length)], new Vector3(transform.position.x + Random.Range(-range, range), transform.position.y), transform.rotation, spawnParent);
         //spawned objects destroyed after used
 
 
