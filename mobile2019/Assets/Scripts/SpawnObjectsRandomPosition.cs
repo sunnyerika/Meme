@@ -16,7 +16,8 @@ public class SpawnObjectsRandomPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnParent = GameObject.Find("SpawnedObjects").transform; //name of the object in the inspector
+        //spawnParent = GameObject.Find("SpawnedObjects").transform; //name of the object in the inspector
+        spawnParent = GameObject.Find("SpawnerRandomPosition").transform;
         StartCoroutine(WaitToSpawn());//to loop
 
     }
