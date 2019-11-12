@@ -78,9 +78,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Bird3Fall.unity
     guid: db488fbee719b354095bc3eb4293af68
   - enabled: 0
-    path: Assets/Scenes/Bird5.unity
-    guid: a291782b7a3c8484d9d651f6aa522a63
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Bird5DetectSwipeDirection2TrailPrefab 1.unity
+    guid: e251e7327fe11c042a7c5d13549613ac
   m_configObjects: {}
