@@ -17,9 +17,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tap&SwipeBounce.unity
     guid: 166e696d22397744683633157bf617fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bird6.unity
     guid: c6d5f25e81b531c48ba6943b6716af4f
+  - enabled: 0
+    path: Assets/Scenes/Bird7.unity
+    guid: c634d23beae2acd43975edbcb8ed9973
+  - enabled: 1
+    path: Assets/Scenes/Bird7b.unity
+    guid: fff6883249e46c34c82d0e63b40430c5
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
