@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Bird7.unity
     guid: c634d23beae2acd43975edbcb8ed9973
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bird7b.unity
     guid: fff6883249e46c34c82d0e63b40430c5
+  - enabled: 1
+    path: Assets/Scenes/Bird9.unity
+    guid: 42766776463d1f84cb80521bca4b9905
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

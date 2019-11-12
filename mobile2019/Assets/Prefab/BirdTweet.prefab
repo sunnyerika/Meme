@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1335681578116115481}
   - component: {fileID: 878098648658197247}
   - component: {fileID: 1938864266738909472}
+  - component: {fileID: 6515467342145118711}
   - component: {fileID: 3707060826290120813}
   m_Layer: 0
   m_Name: BirdTweet
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &878098648658197247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,12 +113,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805183504011868062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3387cd2afc244c641b9300f7de3251d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweet: {fileID: 7111899986075820856, guid: ac8abca88cc8d42418ea33b0829e5979, type: 3}
+  tweet: {fileID: 805183504011868062}
 --- !u!114 &1938864266738909472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7522e66e8f546b748b5ee272b26d6a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6515467342145118711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805183504011868062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc68758dd549d94a9bf9260c333f3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweet: {fileID: 3967069234981783039, guid: d7f7e370c701e3647a35ea5c139ea411, type: 3}
+  bird: {fileID: 7111899986075820856, guid: ac8abca88cc8d42418ea33b0829e5979, type: 3}
 --- !u!58 &3707060826290120813
 CircleCollider2D:
   m_ObjectHideFlags: 0
