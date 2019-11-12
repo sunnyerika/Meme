@@ -29,7 +29,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tap&SwipeDestroyFallReset1SpawnOnCollide.unity
     guid: a5e19366006410143bb5a9feb44f23f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bird1.unity
     guid: b6e1f39b0e39f7f468e6f1591fe701a5
+  - enabled: 1
+    path: Assets/Scenes/Bird3Fall.unity
+    guid: db488fbee719b354095bc3eb4293af68
+  - enabled: 0
+    path: Assets/Scenes/Bird5DetectSwipeDirection2TrailPrefab 1.unity
+    guid: e251e7327fe11c042a7c5d13549613ac
   m_configObjects: {}
