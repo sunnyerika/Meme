@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainSplash.unity
     guid: 84d2e17480ae5ed468d26e4eca3a7124
   - enabled: 0
+    path: Assets/Scenes/MainSplash1.unity
+    guid: 70c22831d8c897e44ba7ee5fe8f62d2b
+  - enabled: 0
     path: Assets/Scenes/Basics.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Scenes/Tap&SwipeBounce.unity
     guid: 166e696d22397744683633157bf617fb
   - enabled: 0
-    path: Assets/Scenes/Tap&SwipeBounceSpawn.unity
-    guid: 5707825bc1b20fa47bc387c821d41d39
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Tap&SwipeDestroy.unity
-    guid: ee84e0065ddda474baad4b7e0ebc491b
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Tap&SwipeDestroyFall.unity
     guid: c042dbcaf47409a48817052a08712f70
@@ -32,10 +35,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Bird1.unity
     guid: b6e1f39b0e39f7f468e6f1591fe701a5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bird3Fall.unity
     guid: db488fbee719b354095bc3eb4293af68
+  - enabled: 1
+    path: Assets/Scenes/Bird5.unity
+    guid: a291782b7a3c8484d9d651f6aa522a63
   - enabled: 0
-    path: Assets/Scenes/Bird5DetectSwipeDirection2TrailPrefab 1.unity
-    guid: e251e7327fe11c042a7c5d13549613ac
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
