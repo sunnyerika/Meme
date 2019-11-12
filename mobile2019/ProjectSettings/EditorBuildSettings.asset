@@ -26,9 +26,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Bird7b.unity
     guid: fff6883249e46c34c82d0e63b40430c5
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Bird7b1.unity
+    guid: b06a3cac6e512474994450b1910c7a46
+  - enabled: 0
+    path: Assets/Scenes/Bird7b2.unity
+    guid: 9face8c13fa2cbf4ab891565dad37cac
+  - enabled: 0
     path: Assets/Scenes/Bird9.unity
     guid: 42766776463d1f84cb80521bca4b9905
+  - enabled: 0
+    path: Assets/Scenes/Bird10.unity
+    guid: 9303b59c766ac8a4682fc2e3f8746cb2
+  - enabled: 0
+    path: Assets/Scenes/Bird13.unity
+    guid: ef3ada0a4b4f39945b8f9f01c265e6c0
+  - enabled: 1
+    path: Assets/Scenes/Bird14.unity
+    guid: 2abfde067ffe86444813130570f45f45
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
