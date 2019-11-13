@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4422074622486791454}
   - component: {fileID: 3331239868694497533}
   m_Layer: 0
-  m_Name: birdSwipe
+  m_Name: StartBirdSwipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c0727f343aa28624d8a0a98c7f43dd10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d538c7f139e042438a255391078a810, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

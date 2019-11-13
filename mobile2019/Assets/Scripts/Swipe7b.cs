@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Swipe7b : MonoBehaviour
 {
@@ -102,10 +103,9 @@ public class Swipe7b : MonoBehaviour
                 }
                 else
                 {
+                    SceneManager.LoadScene("Tap&SwipeDestroyFallReset1");
                     swipedLeft = true;
                     Destroy(gameObject);
-                    
-
                 }
             }
 
