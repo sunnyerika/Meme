@@ -15,7 +15,7 @@ public class MouseInput2 : MonoBehaviour
     [Header("Bird Sprites")]
     public GameObject bird, flyingBird, dropingBird;
     public Sprite deadBird;
-    public AudioClip good_chirp, bad_chirp, bgrd_audio ;
+    public AudioSource good_chirp, bad_chirp ;
     
 
 
@@ -43,11 +43,13 @@ public class MouseInput2 : MonoBehaviour
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
 
-    private int fails =11;
+    private int fails =0;
 
     void Start()
     {
         Onspawn();
+        // good_chirp = GetComponent<AudioSource>();
+        good_chirp.Play();
         
     }
 
@@ -148,6 +150,8 @@ public class MouseInput2 : MonoBehaviour
     }
     private void FlyAway()
     {
+        good_chirp.enabled = true;
+        good_chirp.Play();
         Destroy(flyingBirdInstance);
         flyingBirdInstance = Instantiate(flyingBird, bird.transform.position, bird.transform.rotation);
         flyingBirdInstance.transform.localScale = bird.transform.localScale;
@@ -168,6 +172,7 @@ public class MouseInput2 : MonoBehaviour
     {
         Vector3 localBirdPos = new Vector3(bird.transform.position.x, bird.transform.position.y,0);
         Destroy(flyingBirdInstance);
+        bad_chirp.Play();
         dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
         fails++;
