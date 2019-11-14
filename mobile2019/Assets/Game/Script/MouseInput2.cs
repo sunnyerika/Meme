@@ -273,7 +273,9 @@ public class MouseInput2 : MonoBehaviour
     {
         //StartCoroutine(WaitToSpawn());
         overlayState.SetActive(true);
-        bird.SetActive(false);
+        button_restart.SetActive(true);
+        button_shop.SetActive(true);
+        //bird.SetActive(false);
     }
 
 
