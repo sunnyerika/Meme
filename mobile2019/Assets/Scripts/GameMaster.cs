@@ -11,7 +11,7 @@ public class GameMaster : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game1");
     }
     // Start is called before the first frame update
     void Start()
