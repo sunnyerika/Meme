@@ -3,8 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+  tags:
   - Bird
   - Bounds
+  - Bottom
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Background Image
+  - 
   - 
   - 
   - 

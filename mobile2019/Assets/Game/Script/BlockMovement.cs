@@ -22,7 +22,7 @@ public class BlockMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bounds")
+        if (collision.gameObject.tag == "Bounds" )
         {
             
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
