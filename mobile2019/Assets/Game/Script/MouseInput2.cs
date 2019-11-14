@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MouseInput2 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject myPanel, tweetPanel, spawnPoint, overlayState, button_restart, button_shop;
+    public GameObject myPanel, tweetPanel, spawnPoint, overlayState;
     
     [Header("Tweets Sprites")]
     public Sprite[] tweets;
@@ -267,17 +267,18 @@ public class MouseInput2 : MonoBehaviour
         bird.SetActive(false);
         yield return new WaitForSeconds(delay);
         enterFailState();
-        SceneManager.LoadScene("GameOver");
+        //SceneManager.LoadScene("GameOver");
 
     }
 
     public void enterFailState()
     {
         //StartCoroutine(WaitToSpawn());
-        overlayState.SetActive(true);
-        button_restart.SetActive(true);
-        button_shop.SetActive(true);
+        //overlayState.SetActive(true);
+        //button_restart.SetActive(true);
+        //button_shop.SetActive(true);
         //bird.SetActive(false);
+        SceneManager.LoadScene("GameOver");
     }
 
 

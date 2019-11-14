@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Game/Scene/Title Scene.unity
     guid: df3c21161fd53fa499ca92725cb2489f
+  - enabled: 1
+    path: Assets/Game/Scene/FailState.unity
+    guid: 6ab7042869be2b440a828051b6cfb9d6
   m_configObjects: {}
