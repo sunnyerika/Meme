@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     public void GoToMoneyScene()
     {
-        SceneManager.LoadScene("MoneyMoney");
+        SceneManager.LoadScene("FailState");
     }
     public void Restart()
     {
