@@ -31,6 +31,8 @@ public class MouseInput2 : MonoBehaviour
 
     private bool swipeLeft;
     private bool swipeRight;
+    private bool fakeTweet = false;
+    private bool realTweet = false;
 
     [SerializeField]
     [Header("Other Settings")]
@@ -86,41 +88,11 @@ public class MouseInput2 : MonoBehaviour
                 
                 clickedObject.transform.position = Vector2.Lerp(startPos, destPos, swipeSpeed * Time.deltaTime);
                 myPanel.SetActive(false);
-                if (offset > margin && index < 3) // Towards right & true
-                {
-                    offset = 0f;
-                    bird.SetActive(false);
-                    tweetPanel.SetActive(false);
-                    FlyAway();
-                    Respawn();
 
-                    /*else
-                   {
-                       offset = 0f;                       
-                       tweetPanel.SetActive(false);
-                       Respawn();
-                   }*/
-
-                }
-                else if (offset < -margin) // Towards left
-                {
-                    if (index >= 3)//fake
-                    {
-                        offset = 0f;
-                        bird.SetActive(false);
-                        tweetPanel.SetActive(false);
-                        FlyAway();
-                        Respawn();
-                    }
-                    else
-                    {
-                        bird.SetActive(false);
-                        offset = 0f;
-                        tweetPanel.SetActive(false);
-                        Respawn();
-                        DropDown();
-                    }
-                }
+                checkSwipeDirection();
+                setFakeReal();
+                respondToSwipe();
+                
                 
             }
         }
@@ -150,6 +122,7 @@ public class MouseInput2 : MonoBehaviour
     {
         tweetPanel.GetComponent<RectTransform>().position = new Vector3(0, tweetPanel.GetComponent<RectTransform>().position.y, tweetPanel.GetComponent<RectTransform>().position.z);
         bird.transform.position = new Vector3(11f, 1062f, -150f);
+        //bird.transform.rotation = new Vector3(0f, 0f, 0f);
         bird.SetActive(true);
         clickedObject = null;
         Onspawn();
@@ -173,8 +146,9 @@ public class MouseInput2 : MonoBehaviour
 
     private void DropDown()
     {
+        Vector3 localBirdPos = new Vector3(bird.transform.position.x, bird.transform.position.y,0);
         Destroy(flyingBirdInstance);
-        dropingBirdInstance = Instantiate(dropingBird, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
  
     }
@@ -187,6 +161,27 @@ public class MouseInput2 : MonoBehaviour
     }
 
 
+    public void actionForCorrectSwipe()
+    {
+        resetTweetPanel();
+        FlyAway();
+        Respawn();
+    }
+
+    public void actionForWrongSwipe()
+    {
+        resetTweetPanel();
+        DropDown();
+        Respawn();
+    }
+
+    public void resetTweetPanel()
+    {
+        bird.SetActive(false);
+        offset = 0f;
+        tweetPanel.SetActive(false);
+    }
+
 
     public void checkSwipeDirection ()
     {
@@ -194,10 +189,58 @@ public class MouseInput2 : MonoBehaviour
         {
             swipeRight = true;
         }
-        else if(offset < margin)
+        else if(offset < -margin)
         {
             swipeLeft = true;
         }
+    }
+
+    public void setFakeReal()
+    {
+        if (index < 3)
+        {
+            realTweet = true;
+        }
+        if (index >= 3)
+        {
+            fakeTweet = true;
+        }
+    }
+
+    public void respondToSwipe()
+    {
+
+        if (swipeRight)
+        {
+            if (realTweet)
+            {
+                actionForCorrectSwipe();
+                realTweet = false;
+                swipeRight = false;
+            }
+            else if (fakeTweet)
+            {
+                actionForWrongSwipe();
+                fakeTweet = false;
+                swipeRight = false;
+             }
+        } else if (swipeLeft)
+        {
+            if (realTweet)
+            {
+                actionForWrongSwipe();
+                realTweet = false;
+                swipeLeft = false;
+
+            } 
+            else if (fakeTweet)
+            {
+                actionForCorrectSwipe();
+                fakeTweet = false;
+                swipeLeft = false;
+            }
+        }
+
 
 
     }
