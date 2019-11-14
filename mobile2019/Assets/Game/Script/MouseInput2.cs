@@ -15,6 +15,8 @@ public class MouseInput2 : MonoBehaviour
     [Header("Bird Sprites")]
     public GameObject bird, flyingBird, dropingBird;
     public Sprite deadBird;
+    public AudioClip good_chirp, bad_chirp, bgrd_audio ;
+    
 
 
     [SerializeField]
@@ -41,7 +43,7 @@ public class MouseInput2 : MonoBehaviour
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
 
-    private int fails =0;
+    private int fails =11;
 
     void Start()
     {
@@ -139,7 +141,7 @@ public class MouseInput2 : MonoBehaviour
     {
         tweetPanel.GetComponent<RectTransform>().position = new Vector3(0, tweetPanel.GetComponent<RectTransform>().position.y, tweetPanel.GetComponent<RectTransform>().position.z);
         bird.transform.position = new Vector3(11f, 1062f, -150f);
-        //bird.transform.rotation = new Vector3(0f, 0f, 0f);
+        bird.transform.rotation = new Quaternion(0,0,0,0);
         bird.SetActive(true);
         clickedObject = null;
         Onspawn();
@@ -169,7 +171,7 @@ public class MouseInput2 : MonoBehaviour
         dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
         fails++;
- 
+        
     }
 
 
