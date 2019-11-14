@@ -41,7 +41,7 @@ public class MouseInput2 : MonoBehaviour
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
 
-    private int fails =11;
+    private int fails =10;
 
     void Start()
     {
@@ -57,7 +57,8 @@ public class MouseInput2 : MonoBehaviour
         {
             //overlayState = Instantiate(overlayState, bird.transform.position, bird.transform.rotation);
             //enterFailState();
-            StartCoroutine(WaitToSpawn());
+            //StartCoroutine(WaitToSpawn());
+            enterFailState();
 
         }
 
@@ -246,6 +247,7 @@ public class MouseInput2 : MonoBehaviour
         {
             if (realTweet)
             {
+                
                 actionForWrongSwipe();
                 realTweet = false;
                 swipeLeft = false;
@@ -261,15 +263,18 @@ public class MouseInput2 : MonoBehaviour
 
     }
 
+    /*
     IEnumerator WaitToSpawn()
     {
         //create delay
         bird.SetActive(false);
         yield return new WaitForSeconds(delay);
         enterFailState();
+        
         //SceneManager.LoadScene("GameOver");
 
     }
+    */
 
     public void enterFailState()
     {

@@ -289,7 +289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354740442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -926, z: 0}
+  m_LocalPosition: {x: -5, y: -1001, z: 0}
   m_LocalScale: {x: 1048.1, y: 71.6, z: 65}
   m_Children: []
   m_Father: {fileID: 0}
@@ -834,8 +834,6 @@ MonoBehaviour:
   tweetPanel: {fileID: 629808683}
   spawnPoint: {fileID: 677024144}
   overlayState: {fileID: 441065219}
-  button_restart: {fileID: 0}
-  button_shop: {fileID: 0}
   tweets:
   - {fileID: 21300000, guid: faca219753a818f4f986a5748a2602ef, type: 3}
   - {fileID: 21300000, guid: 366fff0763b423a48a5319bf7b841972, type: 3}
@@ -1444,7 +1442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: {x: 75, y: -75}
-  acceleration: {x: 15, y: 27}
+  acceleration: {x: 30, y: 30}
 --- !u!61 &1718810839
 BoxCollider2D:
   m_ObjectHideFlags: 0
