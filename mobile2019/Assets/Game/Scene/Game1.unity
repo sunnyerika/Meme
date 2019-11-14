@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -835,8 +835,30 @@ MonoBehaviour:
   spawnPoint: {fileID: 677024144}
   overlayState: {fileID: 441065219}
   tweets:
-  - {fileID: 21300000, guid: faca219753a818f4f986a5748a2602ef, type: 3}
-  - {fileID: 21300000, guid: 366fff0763b423a48a5319bf7b841972, type: 3}
+  - {fileID: 21300000, guid: b7f0086c0f08bb0469222c29ff0f0a27, type: 3}
+  - {fileID: 21300000, guid: 058be8014d3f61849a99452530721df6, type: 3}
+  - {fileID: 21300000, guid: be884612582584c45aa2f8fbcbe06cb6, type: 3}
+  - {fileID: 21300000, guid: 759b08d895f6a044db1e337a8f51b748, type: 3}
+  - {fileID: 21300000, guid: 99e301bd2a7996645bd06483fe125848, type: 3}
+  - {fileID: 21300000, guid: c6ec308918a065242901a70e94724721, type: 3}
+  - {fileID: 21300000, guid: 977ddb1746530654aab49b9a3a843edf, type: 3}
+  - {fileID: 21300000, guid: ac68122dfd72cc24e892d4dd49420fa8, type: 3}
+  - {fileID: 21300000, guid: d4a242112ab5eab4680d06ff5f8d2cff, type: 3}
+  - {fileID: 21300000, guid: 24b0995454acd794c96a55a16ce2f1e4, type: 3}
+  - {fileID: 21300000, guid: 7fb3f7c073ad9604791e4e25b72b74c1, type: 3}
+  - {fileID: 21300000, guid: bf0819a59e36dab44995029f9c42f6f6, type: 3}
+  - {fileID: 21300000, guid: 006f8e65ceb8631419b3fddbfd25bb7f, type: 3}
+  - {fileID: 21300000, guid: e643133d5150ee847b6e77a57199c592, type: 3}
+  - {fileID: 21300000, guid: 8fff34bbc12c32540b9904414e09c063, type: 3}
+  - {fileID: 21300000, guid: 6cf9e70ec928d4144a84177406a80832, type: 3}
+  - {fileID: 21300000, guid: caea70868ec34064991e53028aefe56d, type: 3}
+  - {fileID: 21300000, guid: 554da642515fb314e8146087ff87c333, type: 3}
+  - {fileID: 21300000, guid: 589abe441b4dff84399667b6159a5d03, type: 3}
+  - {fileID: 21300000, guid: 438c11344cec60941882e531316aafad, type: 3}
+  - {fileID: 21300000, guid: a4cc4782e27ba7144ab8ee11039e12fa, type: 3}
+  - {fileID: 21300000, guid: 413c0f50606ccc44d87dd0f0a6d19d36, type: 3}
+  - {fileID: 21300000, guid: bdec1e5906c7da04a9d786ef165baee7, type: 3}
+  - {fileID: 21300000, guid: 667d5ea025ce6dc4f97983f62e1595f4, type: 3}
   bird: {fileID: 1718810836}
   flyingBird: {fileID: 2001979106024045908, guid: 21fb583bd266ccc439aaf7cefb63316d,
     type: 3}

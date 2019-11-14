@@ -41,7 +41,7 @@ public class MouseInput2 : MonoBehaviour
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
 
-    private int fails =10;
+    private int fails =0;
 
     void Start()
     {
@@ -216,11 +216,11 @@ public class MouseInput2 : MonoBehaviour
 
     public void setFakeReal()
     {
-        if (index < 3)
+        if (index < 12)
         {
             realTweet = true;
         }
-        if (index >= 3)
+        if (index >= 12)
         {
             fakeTweet = true;
         }
