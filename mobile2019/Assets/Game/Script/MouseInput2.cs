@@ -28,6 +28,10 @@ public class MouseInput2 : MonoBehaviour
     private Vector3 flyVelocity;
     private Vector3 direction;
     private Vector3 velocity;
+
+    private bool swipeLeft;
+    private bool swipeRight;
+
     [SerializeField]
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
@@ -82,28 +86,25 @@ public class MouseInput2 : MonoBehaviour
                 
                 clickedObject.transform.position = Vector2.Lerp(startPos, destPos, swipeSpeed * Time.deltaTime);
                 myPanel.SetActive(false);
-                if (offset > margin && index < 3) // Towards right
+                if (offset > margin && index < 3) // Towards right & true
                 {
-
-
                     offset = 0f;
                     bird.SetActive(false);
                     tweetPanel.SetActive(false);
                     FlyAway();
                     Respawn();
 
-                    
-                    {
-                        offset = 0f;                       
-                        tweetPanel.SetActive(false);
-                        Respawn();
-                        DropDown();
-                    }
+                    /*else
+                   {
+                       offset = 0f;                       
+                       tweetPanel.SetActive(false);
+                       Respawn();
+                   }*/
 
                 }
                 else if (offset < -margin) // Towards left
                 {
-                    if (index >= 3)
+                    if (index >= 3)//fake
                     {
                         offset = 0f;
                         bird.SetActive(false);
@@ -128,6 +129,8 @@ public class MouseInput2 : MonoBehaviour
         {
             FlyTimeline();
         }
+
+        
     }
 
     private void Onspawn()
@@ -173,18 +176,9 @@ public class MouseInput2 : MonoBehaviour
         Destroy(flyingBirdInstance);
         dropingBirdInstance = Instantiate(dropingBird, spawnPoint.transform.position, spawnPoint.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
-        
-        //flyVelocity = new Vector3(0, 300, 0);
-        /*
-        speed = 2;
-        direction = Vector3.down;
-        velocity = speed * direction;*/
-        //dropingBirdInstance.GetComponent<Rigidbody>().velocity = velocity;
-       // Vector2 destPos = new Vector2(bird.transform.position.x , -800);
-
-       // dropingBirdInstance.transform.position = Vector2.Lerp(startPos, destPos, swipeSpeed * Time.deltaTime);
-        
+ 
     }
+
 
 
     private void FlyTimeline()
@@ -192,8 +186,21 @@ public class MouseInput2 : MonoBehaviour
         flyingBirdInstance.transform.Translate(flyVelocity * Time.deltaTime);
     }
 
-    private void FlyTimelineDrop( )
+
+
+    public void checkSwipeDirection ()
     {
-        dropingBird.transform.Translate(flyVelocity * Time.deltaTime);
+        if (offset > margin)
+        {
+            swipeRight = true;
+        }
+        else if(offset < margin)
+        {
+            swipeLeft = true;
+        }
+
+
     }
+
+
 }
