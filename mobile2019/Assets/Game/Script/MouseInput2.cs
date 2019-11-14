@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MouseInput2 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject myPanel, tweetPanel, spawnPoint;
+    public GameObject myPanel, tweetPanel, spawnPoint, overlayState, button_restart, button_shop;
     
     [Header("Tweets Sprites")]
     public Sprite[] tweets;
@@ -19,6 +19,8 @@ public class MouseInput2 : MonoBehaviour
     [SerializeField]
     private float margin;
     private float speed;
+    [SerializeField]
+    private float delay;
 
     private Vector2 mousePosition, startPos;
     private int index;
@@ -37,6 +39,9 @@ public class MouseInput2 : MonoBehaviour
     [SerializeField]
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
+
+    private int fails =11;
+
     void Start()
     {
         Onspawn();
@@ -46,6 +51,16 @@ public class MouseInput2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (fails >= 12)
+        {
+            //overlayState = Instantiate(overlayState, bird.transform.position, bird.transform.rotation);
+            //enterFailState();
+            StartCoroutine(WaitToSpawn());
+
+        }
+
+
         // Detecting If input hit something
         if (Input.GetMouseButton(0))
         {
@@ -132,6 +147,7 @@ public class MouseInput2 : MonoBehaviour
         Destroy(flyingBirdInstance);
         flyingBirdInstance = Instantiate(flyingBird, bird.transform.position, bird.transform.rotation);
         flyingBirdInstance.transform.localScale = bird.transform.localScale;
+      
         bool isLeft = Mathf.Sign(flyingBirdInstance.transform.localScale.x) < 0;
         if (isLeft)
         {
@@ -150,6 +166,7 @@ public class MouseInput2 : MonoBehaviour
         Destroy(flyingBirdInstance);
         dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
+        fails++;
  
     }
 
@@ -241,8 +258,22 @@ public class MouseInput2 : MonoBehaviour
             }
         }
 
+    }
 
+    IEnumerator WaitToSpawn()
+    {
+        //create delay
+        bird.SetActive(false);
+        yield return new WaitForSeconds(delay);
+        enterFailState();
+        
+    }
 
+    public void enterFailState()
+    {
+        //StartCoroutine(WaitToSpawn());
+        overlayState.SetActive(true);
+        bird.SetActive(false);
     }
 
 
