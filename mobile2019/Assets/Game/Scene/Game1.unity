@@ -221,7 +221,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 896508ee95d9c164c8a3fa5e82386bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1053,6 +1053,7 @@ MonoBehaviour:
     type: 3}
   good_chirp: {fileID: 921063041}
   bad_chirp: {fileID: 1672500471}
+  trail: {fileID: 94194602}
   margin: 200
   delay: 1
   offset: 100
