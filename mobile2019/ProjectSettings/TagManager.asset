@@ -9,6 +9,8 @@ TagManager:
   - Bottom
   - Dead
   - OverlayState
+  - ButtonShop
+  - ButtonRestart
   layers:
   - Default
   - TransparentFX

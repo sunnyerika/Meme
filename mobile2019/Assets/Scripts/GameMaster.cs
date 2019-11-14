@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
-    public void GoToGameScene()
+    public void GoToMoneyScene()
     {
-        SceneManager.LoadScene("Tap&SwipeDestroyFallReset1");
+        SceneManager.LoadScene("MoneyMoney");
     }
     public void Restart()
     {
