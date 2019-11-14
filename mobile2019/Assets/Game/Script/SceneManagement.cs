@@ -29,6 +29,23 @@ public class SceneManagement : MonoBehaviour
                     SceneManager.LoadScene("Game");
                 }
             }
+
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.tag == "ButtonRestart")
+                {
+                    SceneManager.LoadScene("Game1");
+                }
+            }
+
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.tag == "ButtonShop")
+                {
+                    SceneManager.LoadScene("MoneyMoney");
+                }
+            }
+
         }
     }
 }

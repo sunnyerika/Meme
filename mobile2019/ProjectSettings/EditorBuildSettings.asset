@@ -6,90 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/MainSplash.unity
-    guid: 84d2e17480ae5ed468d26e4eca3a7124
-  - enabled: 0
-    path: Assets/Scenes/MainSplash1.unity
-    guid: 70c22831d8c897e44ba7ee5fe8f62d2b
-  - enabled: 0
-    path: Assets/Scenes/Basics.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Tap&SwipeBounce.unity
-    guid: 166e696d22397744683633157bf617fb
-  - enabled: 0
-    path: Assets/Scenes/Bird6.unity
-    guid: c6d5f25e81b531c48ba6943b6716af4f
-  - enabled: 0
-    path: Assets/Scenes/Bird7.unity
-    guid: c634d23beae2acd43975edbcb8ed9973
-  - enabled: 0
-    path: Assets/Scenes/Bird7b.unity
-    guid: fff6883249e46c34c82d0e63b40430c5
-  - enabled: 0
-    path: Assets/Scenes/Bird7b1.unity
-    guid: b06a3cac6e512474994450b1910c7a46
-  - enabled: 0
-    path: Assets/Scenes/Bird18.unity
-    guid: f11d02f6074e41c4b9a0d87debaecae5
-  - enabled: 0
-    path: Assets/Scenes/Bird19.unity
-    guid: 9217cc28bc48a7b4cb0bc1e63e3385fb
-  - enabled: 0
-    path: Assets/Scenes/Bird7b2.unity
-    guid: 9face8c13fa2cbf4ab891565dad37cac
-  - enabled: 0
-    path: Assets/Scenes/Bird16.unity
-    guid: b87232e189302e945b0d614f6214af46
-  - enabled: 0
-    path: Assets/Scenes/Bird17.unity
-    guid: 40ec5ceb11f7ccf46bed78e10e5a930e
-  - enabled: 0
-    path: Assets/Scenes/Bird9.unity
-    guid: 42766776463d1f84cb80521bca4b9905
-  - enabled: 0
-    path: Assets/Scenes/Bird10.unity
-    guid: 9303b59c766ac8a4682fc2e3f8746cb2
-  - enabled: 0
-    path: Assets/Scenes/Bird13.unity
-    guid: ef3ada0a4b4f39945b8f9f01c265e6c0
-  - enabled: 0
-    path: Assets/Scenes/Bird14.unity
-    guid: 2abfde067ffe86444813130570f45f45
-  - enabled: 0
-    path: Assets/Scenes/Bird12.unity
-    guid: 90b622914cb5470468f1f8f1db2de15d
-  - enabled: 0
-    path: Assets/Scenes/Bird15.unity
-    guid: 9f682758518352444996a259ae84b5c1
-  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Tap&SwipeDestroyFall.unity
-    guid: c042dbcaf47409a48817052a08712f70
-  - enabled: 0
-    path: Assets/Scenes/Tap&SwipeDestroyFallReset1.unity
-    guid: 10a0bdc27489fde4ab916555a2b8ea4e
-  - enabled: 0
-    path: Assets/Scenes/Tap&SwipeDestroyFallReset1SpawnOnCollide.unity
-    guid: a5e19366006410143bb5a9feb44f23f6
-  - enabled: 0
-    path: Assets/Scenes/Bird1.unity
-    guid: b6e1f39b0e39f7f468e6f1591fe701a5
-  - enabled: 0
-    path: Assets/Scenes/Bird3Fall.unity
-    guid: db488fbee719b354095bc3eb4293af68
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Game/Scene/Game1.unity
+    guid: f68c44f3b8d2ce345a4387419a53e50e
+  - enabled: 1
+    path: Assets/Game/Scene/MoneyMoney.unity
+    guid: 78e1464f3b7f8984888e642916987133
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Game/Scene/Game.unity
     guid: 5d18524b4cf385843b58f1581186c90b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scene/Title Scene.unity
     guid: df3c21161fd53fa499ca92725cb2489f
   m_configObjects: {}
