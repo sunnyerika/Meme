@@ -26,7 +26,7 @@ public class SceneManagement : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "Bird")
                 {
-                    SceneManager.LoadScene("Game");
+                    SceneManager.LoadScene("Game1");
                 }
             }
 

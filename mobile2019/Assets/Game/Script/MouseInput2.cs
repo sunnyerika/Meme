@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MouseInput2 : MonoBehaviour
 {
@@ -266,7 +267,8 @@ public class MouseInput2 : MonoBehaviour
         bird.SetActive(false);
         yield return new WaitForSeconds(delay);
         enterFailState();
-        
+        SceneManager.LoadScene("GameOver");
+
     }
 
     public void enterFailState()
