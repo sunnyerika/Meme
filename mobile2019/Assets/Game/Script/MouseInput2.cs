@@ -16,6 +16,9 @@ public class MouseInput2 : MonoBehaviour
     public GameObject bird, flyingBird, dropingBird;
     public AudioSource good_chirp, bad_chirp ;
 
+    [Header("Trail")]
+    public GameObject trail;
+
     [SerializeField]
     private float margin;
     private float speed;
@@ -50,7 +53,7 @@ public class MouseInput2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fails >= 12)
+        if (fails >= 5)
         {
             //overlayState = Instantiate(overlayState, bird.transform.position, bird.transform.rotation);
             //enterFailState();
@@ -63,7 +66,7 @@ public class MouseInput2 : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            trail.transform.position = new Vector3(mousePosition.x, mousePosition.y,-50);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
             if (hit.collider != null)
