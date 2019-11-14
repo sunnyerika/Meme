@@ -103,7 +103,6 @@ public class Swipe7b : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("Tap&SwipeDestroyFallReset1");
                     swipedLeft = true;
                     Destroy(gameObject);
                 }
