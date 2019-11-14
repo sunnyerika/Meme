@@ -34,7 +34,6 @@ public class Collision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collision");
         if (other.gameObject.tag == "Dead")
         {
             Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();

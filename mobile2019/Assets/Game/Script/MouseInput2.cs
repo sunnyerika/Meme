@@ -14,10 +14,7 @@ public class MouseInput2 : MonoBehaviour
 
     [Header("Bird Sprites")]
     public GameObject bird, flyingBird, dropingBird;
-    public Sprite deadBird;
     public AudioSource good_chirp, bad_chirp ;
-    
-
 
     [SerializeField]
     private float margin;
@@ -48,15 +45,11 @@ public class MouseInput2 : MonoBehaviour
     void Start()
     {
         Onspawn();
-        // good_chirp = GetComponent<AudioSource>();
-        good_chirp.Play();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (fails >= 12)
         {
             //overlayState = Instantiate(overlayState, bird.transform.position, bird.transform.rotation);
@@ -65,7 +58,6 @@ public class MouseInput2 : MonoBehaviour
             enterFailState();
 
         }
-
 
         // Detecting If input hit something
         if (Input.GetMouseButton(0))
@@ -88,7 +80,6 @@ public class MouseInput2 : MonoBehaviour
                     clickedObject = hit.collider.gameObject;
                     startPos = new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y);
                     offset = mousePosition.x - clickedObject.GetComponent<RectTransform>().position.x;
-                    Debug.Log(offset);
                 }
 
             }
@@ -97,7 +88,6 @@ public class MouseInput2 : MonoBehaviour
             {
                 //myPanel.SetActive(false);
                 // tweetPanel.SetActive(false);
-                Debug.Log(hit);
             }
         }
         if (Input.GetMouseButtonUp(0)) // Moving Tweet according to finger swipe and Checking for win and fail state
@@ -112,9 +102,7 @@ public class MouseInput2 : MonoBehaviour
 
                 checkSwipeDirection();
                 setFakeReal();
-                respondToSwipe();
-                
-                
+                respondToSwipe();                
             }
         }
 
@@ -122,8 +110,7 @@ public class MouseInput2 : MonoBehaviour
         {
             FlyTimeline();
         }
-
-        
+            
     }
 
     private void Onspawn()
@@ -150,7 +137,6 @@ public class MouseInput2 : MonoBehaviour
     }
     private void FlyAway()
     {
-        good_chirp.enabled = true;
         good_chirp.Play();
         Destroy(flyingBirdInstance);
         flyingBirdInstance = Instantiate(flyingBird, bird.transform.position, bird.transform.rotation);
@@ -170,9 +156,10 @@ public class MouseInput2 : MonoBehaviour
 
     private void DropDown()
     {
+        bad_chirp.Play();
         Vector3 localBirdPos = new Vector3(bird.transform.position.x, bird.transform.position.y,0);
         Destroy(flyingBirdInstance);
-        bad_chirp.Play();
+        //bad_chirp.Play();
         dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
         fails++;
