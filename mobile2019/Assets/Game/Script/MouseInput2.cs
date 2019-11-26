@@ -14,8 +14,10 @@ public class MouseInput2 : MonoBehaviour
 
     [Header("Bird Sprites")]
     public GameObject bird, flyingBird, dropingBird;
-    public Sprite deadBird;
+    public AudioSource good_chirp, bad_chirp ;
 
+    [Header("Trail")]
+    public GameObject trail;
 
     [SerializeField]
     private float margin;
@@ -41,19 +43,17 @@ public class MouseInput2 : MonoBehaviour
     [Header("Other Settings")]
     private float offset, swipeMultiplier = 25f, swipeSpeed = 10f;
 
-    private int fails =10;
+    private int fails =0;
 
     void Start()
     {
         Onspawn();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (fails >= 12)
+        if (fails >= 5)
         {
             //overlayState = Instantiate(overlayState, bird.transform.position, bird.transform.rotation);
             //enterFailState();
@@ -62,12 +62,11 @@ public class MouseInput2 : MonoBehaviour
 
         }
 
-
         // Detecting If input hit something
         if (Input.GetMouseButton(0))
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            trail.transform.position = new Vector3(mousePosition.x, mousePosition.y,-50);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
             if (hit.collider != null)
@@ -84,7 +83,6 @@ public class MouseInput2 : MonoBehaviour
                     clickedObject = hit.collider.gameObject;
                     startPos = new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y);
                     offset = mousePosition.x - clickedObject.GetComponent<RectTransform>().position.x;
-                    Debug.Log(offset);
                 }
 
             }
@@ -93,7 +91,6 @@ public class MouseInput2 : MonoBehaviour
             {
                 //myPanel.SetActive(false);
                 // tweetPanel.SetActive(false);
-                Debug.Log(hit);
             }
         }
         if (Input.GetMouseButtonUp(0)) // Moving Tweet according to finger swipe and Checking for win and fail state
@@ -108,9 +105,7 @@ public class MouseInput2 : MonoBehaviour
 
                 checkSwipeDirection();
                 setFakeReal();
-                respondToSwipe();
-                
-                
+                respondToSwipe();                
             }
         }
 
@@ -118,8 +113,7 @@ public class MouseInput2 : MonoBehaviour
         {
             FlyTimeline();
         }
-
-        
+            
     }
 
     private void Onspawn()
@@ -139,13 +133,14 @@ public class MouseInput2 : MonoBehaviour
     {
         tweetPanel.GetComponent<RectTransform>().position = new Vector3(0, tweetPanel.GetComponent<RectTransform>().position.y, tweetPanel.GetComponent<RectTransform>().position.z);
         bird.transform.position = new Vector3(11f, 1062f, -150f);
-        //bird.transform.rotation = new Vector3(0f, 0f, 0f);
+        bird.transform.rotation = new Quaternion(0,0,0,0);
         bird.SetActive(true);
         clickedObject = null;
         Onspawn();
     }
     private void FlyAway()
     {
+        good_chirp.Play();
         Destroy(flyingBirdInstance);
         flyingBirdInstance = Instantiate(flyingBird, bird.transform.position, bird.transform.rotation);
         flyingBirdInstance.transform.localScale = bird.transform.localScale;
@@ -164,12 +159,14 @@ public class MouseInput2 : MonoBehaviour
 
     private void DropDown()
     {
+        bad_chirp.Play();
         Vector3 localBirdPos = new Vector3(bird.transform.position.x, bird.transform.position.y,0);
         Destroy(flyingBirdInstance);
+        //bad_chirp.Play();
         dropingBirdInstance = Instantiate(dropingBird, localBirdPos, bird.transform.rotation);
         dropingBirdInstance.transform.localScale = bird.transform.localScale;
         fails++;
- 
+        
     }
 
 
@@ -216,11 +213,11 @@ public class MouseInput2 : MonoBehaviour
 
     public void setFakeReal()
     {
-        if (index < 3)
+        if (index < 12)
         {
             realTweet = true;
         }
-        if (index >= 3)
+        if (index >= 12)
         {
             fakeTweet = true;
         }
